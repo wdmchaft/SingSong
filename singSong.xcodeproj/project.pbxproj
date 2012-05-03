@@ -7,25 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7507AA5C1542F7C700F2AFBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7507AA5B1542F7C700F2AFBF /* AVFoundation.framework */; };
+		7507AA5F1542F7D500F2AFBF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7507AA5E1542F7D500F2AFBF /* MediaPlayer.framework */; };
+		7507AA671543324900F2AFBF /* noArtworkImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7507AA641543324900F2AFBF /* noArtworkImage.png */; };
+		7507AA681543324900F2AFBF /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7507AA651543324900F2AFBF /* pauseButton.png */; };
+		7507AA691543324900F2AFBF /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7507AA661543324900F2AFBF /* playButton.png */; };
+		7507AA6B1543531800F2AFBF /* ShowConverted.png in Resources */ = {isa = PBXBuildFile; fileRef = 7507AA6A1543531800F2AFBF /* ShowConverted.png */; };
 		75C9DA2B1541AC910037D1A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9DA2A1541AC910037D1A4 /* UIKit.framework */; };
 		75C9DA2D1541AC910037D1A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9DA2C1541AC910037D1A4 /* Foundation.framework */; };
 		75C9DA2F1541AC910037D1A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9DA2E1541AC910037D1A4 /* CoreGraphics.framework */; };
 		75C9DA351541AC910037D1A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75C9DA331541AC910037D1A4 /* InfoPlist.strings */; };
 		75C9DA371541AC910037D1A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C9DA361541AC910037D1A4 /* main.m */; };
 		75C9DA3B1541AC910037D1A4 /* PTGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C9DA3A1541AC910037D1A4 /* PTGAppDelegate.m */; };
+		75C9DA441541AE090037D1A4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C9DA421541AE090037D1A4 /* HomeViewController.m */; };
+		75C9DA451541AE090037D1A4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C9DA431541AE090037D1A4 /* HomeViewController.xib */; };
+		75C9DA491541D0040037D1A4 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C9DA471541D0040037D1A4 /* MusicViewController.m */; };
+		75C9DA4A1541D0040037D1A4 /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C9DA481541D0040037D1A4 /* MusicViewController.xib */; };
+		75C9DA55154204940037D1A4 /* storedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C9DA54154204940037D1A4 /* storedData.m */; };
+		75C9DA5915420C650037D1A4 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C9DA5715420C650037D1A4 /* VideoViewController.m */; };
+		75C9DA5A15420C650037D1A4 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C9DA5815420C650037D1A4 /* VideoViewController.xib */; };
+		75C9DA5C154218DB0037D1A4 /* thriller album cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C9DA5B154218DB0037D1A4 /* thriller album cover.png */; };
+		75E6CAE915485634004EF427 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E6CAE715485602004EF427 /* AssetsLibrary.framework */; };
+		75E6CAED1548EA7C004EF427 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E6CAEB1548EA5D004EF427 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7507AA5B1542F7C700F2AFBF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7507AA5E1542F7D500F2AFBF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7507AA641543324900F2AFBF /* noArtworkImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noArtworkImage.png; sourceTree = "<group>"; };
+		7507AA651543324900F2AFBF /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
+		7507AA661543324900F2AFBF /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		7507AA6A1543531800F2AFBF /* ShowConverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowConverted.png; sourceTree = "<group>"; };
 		75C9DA261541AC910037D1A4 /* singSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = singSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C9DA2A1541AC910037D1A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		75C9DA2C1541AC910037D1A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		75C9DA2E1541AC910037D1A4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		75C9DA321541AC910037D1A4 /* singSong-Info.plist */ = {isa = PBXFileReference; path = "singSong-Info.plist"; sourceTree = "<group>"; };
+		75C9DA321541AC910037D1A4 /* singSong-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "singSong-Info.plist"; sourceTree = "<group>"; };
 		75C9DA341541AC910037D1A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		75C9DA361541AC910037D1A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		75C9DA381541AC910037D1A4 /* singSong-Prefix.pch */ = {isa = PBXFileReference; path = "singSong-Prefix.pch"; sourceTree = "<group>"; };
-		75C9DA391541AC910037D1A4 /* PTGAppDelegate.h */ = {isa = PBXFileReference; path = PTGAppDelegate.h; sourceTree = "<group>"; };
+		75C9DA381541AC910037D1A4 /* singSong-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "singSong-Prefix.pch"; sourceTree = "<group>"; };
+		75C9DA391541AC910037D1A4 /* PTGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGAppDelegate.h; sourceTree = "<group>"; };
 		75C9DA3A1541AC910037D1A4 /* PTGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGAppDelegate.m; sourceTree = "<group>"; };
+		75C9DA411541AE090037D1A4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		75C9DA421541AE090037D1A4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		75C9DA431541AE090037D1A4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		75C9DA461541D0040037D1A4 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		75C9DA471541D0040037D1A4 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		75C9DA481541D0040037D1A4 /* MusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
+		75C9DA53154204940037D1A4 /* storedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = storedData.h; sourceTree = "<group>"; };
+		75C9DA54154204940037D1A4 /* storedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = storedData.m; sourceTree = "<group>"; };
+		75C9DA5615420C650037D1A4 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		75C9DA5715420C650037D1A4 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		75C9DA5815420C650037D1A4 /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
+		75C9DA5B154218DB0037D1A4 /* thriller album cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thriller album cover.png"; sourceTree = "<group>"; };
+		75E6CAE715485602004EF427 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		75E6CAEB1548EA5D004EF427 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E6CAED1548EA7C004EF427 /* CoreMedia.framework in Frameworks */,
+				75E6CAE915485634004EF427 /* AssetsLibrary.framework in Frameworks */,
+				7507AA5F1542F7D500F2AFBF /* MediaPlayer.framework in Frameworks */,
+				7507AA5C1542F7C700F2AFBF /* AVFoundation.framework in Frameworks */,
 				75C9DA2B1541AC910037D1A4 /* UIKit.framework in Frameworks */,
 				75C9DA2D1541AC910037D1A4 /* Foundation.framework in Frameworks */,
 				75C9DA2F1541AC910037D1A4 /* CoreGraphics.framework in Frameworks */,
@@ -45,6 +85,7 @@
 		75C9DA1B1541AC910037D1A4 = {
 			isa = PBXGroup;
 			children = (
+				7507AA6A1543531800F2AFBF /* ShowConverted.png */,
 				75C9DA301541AC910037D1A4 /* singSong */,
 				75C9DA291541AC910037D1A4 /* Frameworks */,
 				75C9DA271541AC910037D1A4 /* Products */,
@@ -72,8 +113,23 @@
 		75C9DA301541AC910037D1A4 /* singSong */ = {
 			isa = PBXGroup;
 			children = (
+				75E6CAEB1548EA5D004EF427 /* CoreMedia.framework */,
+				75E6CAE715485602004EF427 /* AssetsLibrary.framework */,
+				7507AA5E1542F7D500F2AFBF /* MediaPlayer.framework */,
+				7507AA5B1542F7C700F2AFBF /* AVFoundation.framework */,
 				75C9DA391541AC910037D1A4 /* PTGAppDelegate.h */,
 				75C9DA3A1541AC910037D1A4 /* PTGAppDelegate.m */,
+				75C9DA411541AE090037D1A4 /* HomeViewController.h */,
+				75C9DA421541AE090037D1A4 /* HomeViewController.m */,
+				75C9DA431541AE090037D1A4 /* HomeViewController.xib */,
+				75C9DA53154204940037D1A4 /* storedData.h */,
+				75C9DA54154204940037D1A4 /* storedData.m */,
+				75C9DA461541D0040037D1A4 /* MusicViewController.h */,
+				75C9DA471541D0040037D1A4 /* MusicViewController.m */,
+				75C9DA481541D0040037D1A4 /* MusicViewController.xib */,
+				75C9DA5615420C650037D1A4 /* VideoViewController.h */,
+				75C9DA5715420C650037D1A4 /* VideoViewController.m */,
+				75C9DA5815420C650037D1A4 /* VideoViewController.xib */,
 				75C9DA311541AC910037D1A4 /* Supporting Files */,
 			);
 			path = singSong;
@@ -83,6 +139,10 @@
 			isa = PBXGroup;
 			children = (
 				75C9DA321541AC910037D1A4 /* singSong-Info.plist */,
+				75C9DA5B154218DB0037D1A4 /* thriller album cover.png */,
+				7507AA641543324900F2AFBF /* noArtworkImage.png */,
+				7507AA651543324900F2AFBF /* pauseButton.png */,
+				7507AA661543324900F2AFBF /* playButton.png */,
 				75C9DA331541AC910037D1A4 /* InfoPlist.strings */,
 				75C9DA361541AC910037D1A4 /* main.m */,
 				75C9DA381541AC910037D1A4 /* singSong-Prefix.pch */,
@@ -142,6 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C9DA351541AC910037D1A4 /* InfoPlist.strings in Resources */,
+				75C9DA451541AE090037D1A4 /* HomeViewController.xib in Resources */,
+				75C9DA4A1541D0040037D1A4 /* MusicViewController.xib in Resources */,
+				75C9DA5A15420C650037D1A4 /* VideoViewController.xib in Resources */,
+				75C9DA5C154218DB0037D1A4 /* thriller album cover.png in Resources */,
+				7507AA671543324900F2AFBF /* noArtworkImage.png in Resources */,
+				7507AA681543324900F2AFBF /* pauseButton.png in Resources */,
+				7507AA691543324900F2AFBF /* playButton.png in Resources */,
+				7507AA6B1543531800F2AFBF /* ShowConverted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +222,10 @@
 			files = (
 				75C9DA371541AC910037D1A4 /* main.m in Sources */,
 				75C9DA3B1541AC910037D1A4 /* PTGAppDelegate.m in Sources */,
+				75C9DA441541AE090037D1A4 /* HomeViewController.m in Sources */,
+				75C9DA491541D0040037D1A4 /* MusicViewController.m in Sources */,
+				75C9DA55154204940037D1A4 /* storedData.m in Sources */,
+				75C9DA5915420C650037D1A4 /* VideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +331,7 @@
 				75C9DA401541AC910037D1A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

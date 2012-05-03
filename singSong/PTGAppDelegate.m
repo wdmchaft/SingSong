@@ -1,12 +1,15 @@
-//
-//  PTGAppDelegate.m
-//  singSong
-//
-//  Created by Patrick Grennan on 4/20/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+/*
+ PTGAppDelegate.m
+ singSong
+ 
+ Patrick Grennan
+ grennan@nyu.edu
+ 
+ The app delegate loads a Navigation View Controller and sets the Home VC as it's root VC.
+ */
 
 #import "PTGAppDelegate.h"
+#import "HomeViewController.h"
 
 @implementation PTGAppDelegate
 
@@ -15,7 +18,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    [application setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    
+    HomeViewController *hvc = [[HomeViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:hvc];
+    //[navController setNavigationBarHidden:YES animated:YES];
+    
+    // Use this for testing the individual RVC's
+    //[[self window] setRootViewController:hvc];
+    [[self window] setRootViewController:navController];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

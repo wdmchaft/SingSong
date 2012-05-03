@@ -1,10 +1,12 @@
-//
-//  PTGAppDelegate.h
-//  singSong
-//
-//  Created by Patrick Grennan on 4/20/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+/*
+ PTGAppDelegate.h
+ singSong
+ 
+ Patrick Grennan
+ grennan@nyu.edu
+ 
+ The app delegate loads a Navigation View Controller and sets the Home VC as it's root VC.
+ */
 
 #import <UIKit/UIKit.h>
 
