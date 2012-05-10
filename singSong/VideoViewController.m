@@ -5,11 +5,12 @@
  Patrick Grennan
  grennan@nyu.edu
  
- This VC allows the user to record a video while simultaneously playing a song.
+ This VC allows the user to record a video while simultaneously playing a song in the background.
  */
 
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "VideoViewController.h"
 #import "storedData.h"
 
@@ -41,9 +42,13 @@
         
         // Sleep mode is disabled in this view so that the app does not sleep while recording a video
         [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+        
     }
     return self;
 }
+
+
+
 
 - (void)viewDidLoad
 {
@@ -82,7 +87,7 @@
 	CALayer *viewLayer = self.imagePreview.layer;
 	//NSLog(@"viewLayer = %@", viewLayer);
     
-	AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
+	captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
     
     // For Autorotation
     captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
@@ -90,7 +95,7 @@
 	captureVideoPreviewLayer.frame = self.imagePreview.bounds;
 	[self.imagePreview.layer addSublayer:captureVideoPreviewLayer];
     
-    // This can be extended to feature a front-facing camera
+    // This can be extended here to feature a front-facing camera
 	AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
     // Adding the input
@@ -116,6 +121,9 @@
     
 }
 
+
+
+
 - (void)viewDidUnload
 {
     [self setField1:nil];
@@ -136,10 +144,11 @@
 
 
 
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // This code allows for the view to autorotate
-    /*
+    // This allows for the view to autorotate
+    
     float rotation;
     
     if (interfaceOrientation==UIInterfaceOrientationPortrait) {
@@ -160,10 +169,14 @@
     }];
     
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight) || (interfaceOrientation == UIInterfaceOrientationPortrait);
-     */
     
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    
+    // This forces a portrait orientation
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
+
 
 // This allows the user to synchronously play and pause the recording/playback
 - (IBAction)playPause:(id)sender {
@@ -187,9 +200,23 @@
     }
 }
 
+
+
+
 // After the user is done recording, this finishes the movie by creating an AVComposition and sending it to the Photo Album
 - (IBAction)finishMovie:(id)sender {
     [finishButton setEnabled:NO];
+    
+    loadingAlert = [[UIAlertView alloc] initWithTitle:@"Saving Video..." message:@"" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [loadingAlert show];
+    
+    if(loadingAlert != nil) {
+        UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        
+        indicator.center = CGPointMake(loadingAlert.bounds.size.width/2, loadingAlert.bounds.size.height-45);
+        [indicator startAnimating];
+        [loadingAlert addSubview:indicator];
+    }
     
     // Getting the song asset
     AVURLAsset *song = [[AVURLAsset alloc] initWithURL:[bucket url] options:nil];
@@ -252,6 +279,9 @@
     
 }
 
+
+
+
 // This allows for the user to reshoot scenes
 - (IBAction)redoScene:(id)sender {
     
@@ -269,6 +299,9 @@
     }
 }
 
+
+
+
 - (void) viewDidDisappear:(BOOL)animated{
     [appMusicPlayer stop];
     if ([progressTimer isValid]) {
@@ -276,6 +309,9 @@
     }
     progressTimer = nil;
 }
+
+
+
 
 // The following two functions control the updating slider showing the progress of the song
 - (void)updateSlider {
@@ -293,6 +329,9 @@
     [progressSlider setNeedsDisplay];
 }
 
+
+
+
 - (void)resetTimer:(NSTimer *)timer {
     [progressTimer invalidate];
     progressTimer = nil;
@@ -300,6 +339,8 @@
                                                    selector:@selector(updateSlider)
                                                    userInfo:nil repeats:YES];
 }
+
+
 
 
 // This returns the local URLs that the scenes will be stored in
@@ -320,6 +361,8 @@
 }
 
 
+
+
 - (void) startRecording
 {
     NSURL *url = [self tempFileURL];
@@ -332,6 +375,9 @@
     
 }
 
+
+
+
 - (void) stopRecording
 {
     if([output isRecording])
@@ -339,23 +385,36 @@
     
 }
 
+
+
+
+
+
 // The following two functions handle the saving of the video to the photo library
 - (void) saveVideoToAlbum:(NSString *)path{
     NSLog(@"Saved video to the Album!");
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" 
-                                                    message:@"Your video has been saved to your device's photo album!" 
-                                                   delegate:nil 
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    [loadingAlert dismissWithClickedButtonIndex:0 animated:YES];
+
+    
+    // Alerting the user of a successful saving and popping to the main view
+    UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Success!" 
+                                                           message:@"Your video has been saved to your device's photo album!" 
+                                                          delegate:nil 
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+    [successAlert show];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
     if(UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(path)){
         UISaveVideoAtPathToSavedPhotosAlbum (path, self, @selector(video:didFinishSavingWithError: contextInfo:), nil);
     }
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
+
 
 - (void) video: (NSString *) videoPath didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo {
     NSLog(@"Finished saving video with error: %@", error);
@@ -363,6 +422,7 @@
 
 @end
 
+// Implementing the File output Delegate methods for the AVOutput
 @implementation VideoViewController (FileOutputDelegate)
 
 - (void)             captureOutput:(AVCaptureFileOutput *)captureOutput
@@ -372,6 +432,9 @@ didStartRecordingToOutputFileAtURL:(NSURL *)fileURL
     NSLog(@"Started Recording!");
 
 }
+
+
+
 
 - (void)              captureOutput:(AVCaptureFileOutput *)captureOutput
 didFinishRecordingToOutputFileAtURL:(NSURL *)anOutputFileURL

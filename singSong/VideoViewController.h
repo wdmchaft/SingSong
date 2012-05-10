@@ -5,7 +5,7 @@
  Patrick Grennan
  grennan@nyu.edu
  
- This VC allows the user to record a video while simultaneously playing a song.
+ This VC allows the user to record a video while simultaneously playing a song in the background.
  */
 
 #import <UIKit/UIKit.h>
@@ -24,7 +24,8 @@
     AVURLAsset *video;
     NSMutableArray *videoArray;
     NSMutableArray *songBufferArray;
-    //AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
+    UIAlertView *loadingAlert;
+    AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
     //CMTime recordingDuration;
 }
 

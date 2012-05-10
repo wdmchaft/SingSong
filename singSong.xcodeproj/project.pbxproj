@@ -13,6 +13,8 @@
 		7507AA681543324900F2AFBF /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7507AA651543324900F2AFBF /* pauseButton.png */; };
 		7507AA691543324900F2AFBF /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7507AA661543324900F2AFBF /* playButton.png */; };
 		7507AA6B1543531800F2AFBF /* ShowConverted.png in Resources */ = {isa = PBXBuildFile; fileRef = 7507AA6A1543531800F2AFBF /* ShowConverted.png */; };
+		7510C44615596F9C008485F7 /* beep-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7510C44515596F9C008485F7 /* beep-1.wav */; };
+		7510C44A1559709E008485F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7510C4481559708C008485F7 /* AudioToolbox.framework */; };
 		75C9DA2B1541AC910037D1A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9DA2A1541AC910037D1A4 /* UIKit.framework */; };
 		75C9DA2D1541AC910037D1A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9DA2C1541AC910037D1A4 /* Foundation.framework */; };
 		75C9DA2F1541AC910037D1A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9DA2E1541AC910037D1A4 /* CoreGraphics.framework */; };
@@ -38,6 +40,8 @@
 		7507AA651543324900F2AFBF /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
 		7507AA661543324900F2AFBF /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
 		7507AA6A1543531800F2AFBF /* ShowConverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowConverted.png; sourceTree = "<group>"; };
+		7510C44515596F9C008485F7 /* beep-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-1.wav"; sourceTree = "<group>"; };
+		7510C4481559708C008485F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		75C9DA261541AC910037D1A4 /* singSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = singSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C9DA2A1541AC910037D1A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		75C9DA2C1541AC910037D1A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7510C44A1559709E008485F7 /* AudioToolbox.framework in Frameworks */,
 				75E6CAED1548EA7C004EF427 /* CoreMedia.framework in Frameworks */,
 				75E6CAE915485634004EF427 /* AssetsLibrary.framework in Frameworks */,
 				7507AA5F1542F7D500F2AFBF /* MediaPlayer.framework in Frameworks */,
@@ -113,6 +118,7 @@
 		75C9DA301541AC910037D1A4 /* singSong */ = {
 			isa = PBXGroup;
 			children = (
+				7510C4481559708C008485F7 /* AudioToolbox.framework */,
 				75E6CAEB1548EA5D004EF427 /* CoreMedia.framework */,
 				75E6CAE715485602004EF427 /* AssetsLibrary.framework */,
 				7507AA5E1542F7D500F2AFBF /* MediaPlayer.framework */,
@@ -143,6 +149,7 @@
 				7507AA641543324900F2AFBF /* noArtworkImage.png */,
 				7507AA651543324900F2AFBF /* pauseButton.png */,
 				7507AA661543324900F2AFBF /* playButton.png */,
+				7510C44515596F9C008485F7 /* beep-1.wav */,
 				75C9DA331541AC910037D1A4 /* InfoPlist.strings */,
 				75C9DA361541AC910037D1A4 /* main.m */,
 				75C9DA381541AC910037D1A4 /* singSong-Prefix.pch */,
@@ -210,6 +217,7 @@
 				7507AA681543324900F2AFBF /* pauseButton.png in Resources */,
 				7507AA691543324900F2AFBF /* playButton.png in Resources */,
 				7507AA6B1543531800F2AFBF /* ShowConverted.png in Resources */,
+				7510C44615596F9C008485F7 /* beep-1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
